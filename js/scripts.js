@@ -1,3 +1,4 @@
+
 var add = function(number1, number2) {
   return number1 + number2;
 };
@@ -14,15 +15,27 @@ var division = function(number1, number2) {
   return number1 / number2;
 };
 
-var number1 = parseInt(prompt("Enter a number:"));
-var number2 = parseInt(prompt("Enter another number:"));
 
-var result = subtract(number1, number2);
-var result = add(number1, number2);
-var result = multiply(number1, number2);
-var result = division(number1, number2);
 
-alert(result);
+$(document).ready(function() {
+
+  var calculator = function(clickedButton, mathOperation) {
+    $(clickedButton).click(function(event) {
+      event.preventDefault();
+      var number1 = parseInt($("#1stNum").val());
+      var number2 = parseInt($("#2ndNum").val());
+      var result = mathOperation(number1, number2);
+      $("#output").text(result);
+    });
+  };
+
+  calculator("#addBtn", add)
+  calculator("#subBtn", subtract)
+  calculator("#divBtn", division)
+  calculator("#mulBtn", multiply)
+
+});
+
 
 
 // BMI CALCULATOR

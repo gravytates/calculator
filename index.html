@@ -13,6 +13,23 @@
     <title>Calculator</title>
   </head>
   <body>
-  <h1>Calculator</h1>
+    <div class="container">
+      <h1>Calculator</h1>
+      <form id="add">
+        <div class="form-group">
+          <label for="1stNum">First number:</label>
+          <input id="1stNum" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="2ndNum">Second number:</label>
+          <input id="2ndNum" class="form-control" type="text">
+        </div>
+        <button id="addBtn" type="submit" class="btn">Add!</button>
+        <button id="subBtn" type="submit" class="btn">Subtract!</button>
+        <button id="divBtn" type="submit" class="btn">Divide!</button>
+        <button id="mulBtn" type="submit" class="btn">Multiply!</button>
+      </form>
+      <div id="output"></div>
+    </div>
   </body>
 </html>
